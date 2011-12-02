@@ -1,6 +1,7 @@
 Linux launcher for Jetbrains IDEs, with dock support.
 
 Allows the IDE to correctly work with Docky/AWN; each IDE will have its own icon and won't be exchanged for a different Swing app.
+Otherwise you'll probably get a lot of different apps grouped under the very same icon in docks.
 
 Currently supports:
 
@@ -10,9 +11,37 @@ RubyMine 3.x
 
 
 Usage:
-launcher.sh [script_to_launch, i.e. idea.sh or pycharm.sh] [WM_CLASS_NAME]
-
+launcher.sh [WM_CLASS_NAME] [script_to_launch, i.e. idea.sh or pycharm.sh] 
 Examples:
 
-launcher.sh /opt/idea/bin/idea.sh IDEA
-launcher.sh rubymine.sh RubyMine
+launcher.sh IDEA /opt/idea/bin/idea.sh 
+launcher.sh RubyMine rubymine.sh
+
+
+Reccomended usage for installing desktop entry, in order for your menu to work:
+
+- untar IDE file somewhere, e.g.
+
+cd
+mkdir dev
+cd dev
+tar xvf ~/Downloads/idea-IC-123.tar.gz
+
+- create a symlink for ide type; this will prevent you from needing to upgrade the launcher at every update, just update the symlink.
+
+ln -s idea-IC-123 idea
+
+- clone git repo for jb_ide_launcher
+
+
+cd ~/dev
+git clone git://github.com/alanfranz/jb_ide_launcher.git
+cd jb_ide_launcher
+
+./install_for IDEA_IC ~/dev/idea
+
+
+
+- you should now get a menu entry in your programming or development menu; drag such entry 
+ into your dock, and you're done!
+
