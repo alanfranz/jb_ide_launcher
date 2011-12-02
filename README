@@ -1,0 +1,9 @@
+Linux launcher for Jetbrains IDEs, with dock support.
+
+Allows the IDE to correctly work with Docky/AWN; each IDE will have its own icon and won't be exchanged for a different Swing app.
+
+Currently supports:
+
+IDEA 10/11
+PyCharm 1.x
+RubyMine 3.x
