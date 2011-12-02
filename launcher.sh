@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-LAUNCHER_FILE=$1
-CLASS_NAME=$2
+CLASS_NAME=$1
+LAUNCHER_FILE=$2
 
 trap "Error while executing script, aborted." ERR
 

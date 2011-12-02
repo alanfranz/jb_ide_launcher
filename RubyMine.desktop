@@ -1,0 +1,8 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=RubyMine
+Exec=LAUNCHER_DIR/launcher.sh RubyMine IDE_DIR/bin/rubymine.sh
+Icon=IDE_DIR/bin/rubymine.png
+Type=Application
+Categories=Development;
+StartupWMClass=RubyMine

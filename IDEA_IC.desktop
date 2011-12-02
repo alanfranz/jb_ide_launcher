@@ -1,0 +1,8 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=IDEA
+Exec=LAUNCHER_DIR/launcher.sh IDEA_IC IDE_DIR/bin/idea.sh
+Icon=IDE_DIR/bin/idea_CE128.png
+Type=Application
+Categories=Development;
+StartupWMClass=IDEA_IC

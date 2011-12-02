@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+IDE_TYPE="$1"
+IDE_DIR="$2"
+
+TARGET_DIR="${HOME}/.local/share/applications"
+LAUNCHER_DIR=$(dirname $(readlink -f $0))
+
+# thanks to fvue.nl
+in_array() {
+    local hay needle=$1
+    shift
+    for hay; do
+        [[ $hay == $needle ]] && return 0
+    done
+    return 1
+}
+
+
+if [ ! -e ${IDE_TYPE}.desktop ]
+then
+	echo "Invalid IDE name, check existing .desktop files for supported ones."
+	exit 1
+fi
+
+mkdir -p $TARGET_DIR
+
+sed -e "s|IDE_DIR|${IDE_DIR}|g" -e "s|LAUNCHER_DIR|${LAUNCHER_DIR}|g" ${IDE_TYPE}.desktop > ${TARGET_DIR}/${IDE_TYPE}.desktop
