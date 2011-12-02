@@ -7,3 +7,12 @@ Currently supports:
 IDEA 10/11
 PyCharm 1.x
 RubyMine 3.x
+
+
+Usage:
+launcher.sh [script_to_launch, i.e. idea.sh or pycharm.sh] [WM_CLASS_NAME]
+
+Examples:
+
+launcher.sh /opt/idea/bin/idea.sh IDEA
+launcher.sh rubymine.sh RubyMine
