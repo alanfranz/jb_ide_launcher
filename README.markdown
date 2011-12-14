@@ -2,6 +2,15 @@
 
 ** THIS IS UNOFFICIAL SOFTWARE! I'm not connected to Jetbrains in any way **
 
+## IMPORTANT
+
+As of IDEA 11 and PyCharm 2, this is largely irrelevant because a builtin Tools -> Create desktop entry menu exists, and does almost anything this launcher did.
+
+I just reccomend sticking to the symlink tip i describe below, and change IDEA's created desktop file with symlinked path, to prevent being forced to install a new
+desktop file at every update.
+
+Cheers!
+
 ## Description
 
 Allows the IDE to correctly work with Docky/AWN; each IDE will have its own icon and won't be exchanged for a different Swing app.
